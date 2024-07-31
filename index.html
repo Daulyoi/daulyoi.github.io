@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daul's Portfolio Website</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
         text-shadow: 0 0 7px rgba(0, 0, 0, 0.3), 0 0 3px rgba(175, 218, 193, 0.3);
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body style="font-family: Fira Code;margin-left: 40px; margin-right: 40px; background-color: #333333; color:white;">
   <!---Header-->
@@ -39,7 +40,7 @@
               <a class="nav-link text-white" href="#projects"><span style="color: #AFDAC1;">#</span>projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#"><span style="color: #AFDAC1;">#</span>about-me</a>
+              <a class="nav-link text-white" href="#aboutme"><span style="color: #AFDAC1;">#</span>about-me</a>
             </li>
           </ul>
         </div>
@@ -75,7 +76,7 @@
   <!---Projects-->
   <div class="container-projects p-5 glow2" id="projects">
     <div class="d-flex">
-      <h1 class="ms-auto me-auto" style="font-size:xx-large;"><span style="color: #AFDAC1;">#</span>projects</h1>
+      <h1 class="ms-auto me-auto mb-4" style="font-size:xx-large;"><span style="color: #AFDAC1;">#</span>projects</h1>
     </div>
     <div class="cards d-flex glowblack">
       <div class="card ms-auto me-auto" style="width: 18rem;">
@@ -87,6 +88,35 @@
         </div>
       </div>
     </div>
+    </div>
+  </div>
+  
+  <!---About Me-->
+  <div class="container-aboutme p-5" id="aboutme">
+    <div class="d-flex flex-column">
+      <h1 class="ms-auto me-auto glow2" style="font-size: xx-large;"><span style="color: #AFDAC1;">#</span>about-me</h1>
+      <div class="accordion ms-auto me-auto" style="width: 800px; --bs-accordion-active-bg :#FFFFFF;">
+        <div class="accordion-item" id="accordion-item1">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" style="box-shadow: none;" id="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Language & Tools
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion-item1">
+            <div class="accordion-body">I understand Python, HTML, CSS, and C++. I've used Python and C++ to solve problems found in competitive programming. I've also used HTML and CSS to make this website, with the help of the Bootstrap framework.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" style="box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              IRL
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">My IRL hobbies include gaming, watching anime, and cooking(sometimes).</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
