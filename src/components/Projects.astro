@@ -1,3 +1,25 @@
-<div id="projects" class="flex flex-col items-center justify-center h-screen ">
-    Projects Page
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<div id="projects" class="flex flex-col py-8 items-center justify-center ">
+    <h1 class="text-3xl text-white font-bold">Projects</h1>
+    <div class="h-full w-full bg-neutral-800 text-white p-8 rounded-xl shadow-lg mt-4">
+        <ProjectCard
+            title="Portfolio Website"
+            desc="Portofolio website built with Astro and Tailwind CSS."
+            cover="/DummyImg.jpg"
+            />
+        <ProjectCard
+            title="ITTODAY 2025"
+            desc="A website for ITTODAY 2025, a national level competition event held by HIMALKOM. Built with React. Worked as a frontend developer."
+            cover="/DummyImg.jpg"
+            />
+        <ProjectCard
+            title="Orlin Farm"
+            desc="A website for a local business, built as a final project for my software engineering course. Built with Laravel. Worked as a backend developer."
+            cover="/DummyImg.jpg"
+            />
+
+    </div>
 </div>
