@@ -3,3 +3,7 @@
 @theme {
     --font-lexend : 'Lexend', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
