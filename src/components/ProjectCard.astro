@@ -1,0 +1,13 @@
+---
+const { title, cover, desc, link } = Astro.props;
+
+// add onclick event to open article
+---
+
+<div>
+    <div class="flex flex-col p-4 rounded-lg mb-6">
+        <img src={cover} alt={title} class="w-full h-48 object-cover rounded-lg border-2 hover:scale-105 transition duration-300"/> 
+        <a href={link} target="_blank" class="cursor-pointer"><h2 class="text-xl font-semibold text-blue-400 mt-4 hover:underline underline-offset-2">{title}</h2></a>
+        <p class="text-neutral-300 mt-2 text-sm">{desc}</p>
+    </div>
+</div>
