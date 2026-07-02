@@ -4,22 +4,25 @@ description: "A website for ITTODAY 2025, a national level competition event hel
 cover: "/ittoday-2025.webp"
 link: "https://ittoday.web.id/"
 date: 2025-03-01
-tags: ["React", "Team Project"]
+tags: ["React", "Tailwind CSS", "Express.js", "Team Project"]
 ---
 
 ## Overview
 
-ITTODAY 2025 is the official website for a national-level IT competition event organized by HIMALKOM (the Computer Science student association at IPB University). The site was used to register participants, display event information, and announce results.
+ITTODAY 2025 is the official website for a national-level computer science competition and seminar organized by HIMALKOM (the Computer Science student association at IPB University). The platform handled registrations and event information for **500+ active users**.
 
 ## My Role
 
-I worked as a **frontend developer** within a team, responsible for building and styling several pages using React.
+I worked as a **frontend developer** within a team, building reusable UI components and integrating them with the backend API.
+
+## What I Did
+
+- Developed reusable UI components with **React.js** and **Tailwind CSS** for the competition and seminar platform.
+- Integrated frontend components with **Express.js** API endpoints to manage participant registrations.
+- Collaborated with a team using a shared Git workflow, code reviews, and task division.
 
 ## Tech Stack
 
-- **React** — component-based UI
-- **Team collaboration** — Git workflow, code review, and task division
-
-## What I Learned
-
-This project was my first experience contributing to a real production site as part of a team. I gained experience with collaborative Git workflows, component design consistency, and meeting real deadlines.
+- **React.js** — component-based UI
+- **Tailwind CSS** — utility-first styling
+- **Express.js** — backend API integration
