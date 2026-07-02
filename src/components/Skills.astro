@@ -1,0 +1,94 @@
+---
+interface Skill {
+    name: string;
+    icon?: string; // devicon class, e.g. "devicon-react-original colored"
+}
+
+interface Category {
+    label: string;
+    skills: Skill[];
+}
+
+const categories: Category[] = [
+    {
+        label: "Languages",
+        skills: [
+            { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+            { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+            { name: "HTML", icon: "devicon-html5-plain colored" },
+            { name: "CSS", icon: "devicon-css3-plain colored" },
+            { name: "Python", icon: "devicon-python-plain colored" },
+            { name: "PHP", icon: "devicon-php-plain colored" },
+        ],
+    },
+    {
+        label: "Frontend",
+        skills: [
+            { name: "React.js", icon: "devicon-react-original colored" },
+            { name: "Astro.js", icon: "devicon-astro-plain colored" },
+            {
+                name: "Tailwind CSS",
+                icon: "devicon-tailwindcss-original colored",
+            },
+            { name: "SCSS", icon: "devicon-sass-original colored" },
+            { name: "Leaflet.js" },
+        ],
+    },
+    {
+        label: "Backend",
+        skills: [
+            { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
+            { name: "Express.js", icon: "devicon-express-original" },
+            { name: "Laravel", icon: "devicon-laravel-original colored" },
+        ],
+    },
+    {
+        label: "Databases & Storage",
+        skills: [
+            { name: "MySQL", icon: "devicon-mysql-original colored" },
+            { name: "Appwrite", icon: "devicon-appwrite-original colored" },
+        ],
+    },
+    {
+        label: "DevOps & Tools",
+        skills: [
+            { name: "Git", icon: "devicon-git-plain colored" },
+            { name: "Docker", icon: "devicon-docker-plain colored" },
+            { name: "Railway", icon: "devicon-railway-original colored" },
+            { name: "Postman", icon: "devicon-postman-plain colored" },
+            { name: "Insomnia", icon: "devicon-insomnia-plain colored" },
+            { name: "Figma", icon: "devicon-figma-plain colored" },
+        ],
+    },
+];
+---
+
+<div id="skills" class="flex flex-col py-8 items-center justify-center">
+    <h1 class="text-3xl text-white font-bold">Skills</h1>
+
+    <div
+        class="w-full bg-neutral-800 text-white p-8 rounded-xl shadow-lg mt-4 space-y-6"
+    >
+        {
+            categories.map((cat) => (
+                <div>
+                    <h2 class="text-sm font-semibold text-neutral-400 uppercase tracking-widest mb-3">
+                        {cat.label}
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        {cat.skills.map((skill) => (
+                            <div class="inline-flex items-center gap-2 bg-neutral-700 rounded-full px-3 py-1.5 text-sm font-medium">
+                                {skill.icon && (
+                                    <i
+                                        class={`${skill.icon} text-xl leading-none`}
+                                    />
+                                )}
+                                <span>{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
