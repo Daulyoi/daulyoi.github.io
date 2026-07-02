@@ -1,0 +1,70 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    return projects.map((project) => ({
+        params: { id: project.id },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, cover, description, link, date, tags } = project.data;
+
+const formattedDate = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
+---
+
+<Layout>
+    <Navbar />
+    <article class="py-12 text-white max-w-3xl mx-auto">
+        <a
+            href="/#projects"
+            class="text-neutral-400 hover:text-white text-sm transition duration-200 mb-6 inline-block"
+            >&larr; Back to projects</a
+        >
+
+        <img
+            src={cover}
+            alt={title}
+            class="w-full h-64 object-cover rounded-xl border-2 border-neutral-600 mb-8"
+        />
+
+        <div class="mb-6">
+            <h1 class="text-3xl lg:text-4xl font-bold mb-2">{title}</h1>
+            <p class="text-neutral-400 text-sm mb-4">{formattedDate}</p>
+            {
+                tags && (
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {tags.map((tag) => (
+                            <span class="bg-neutral-700 text-neutral-200 text-xs px-3 py-1 rounded-full">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                )
+            }
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-blue-400 text-white text-sm font-semibold px-5 py-2 rounded-full border-2 border-blue-400 hover:border-white transition duration-300"
+            >
+                View Project &rarr;
+            </a>
+        </div>
+
+        <hr class="border-neutral-600 mb-8" />
+
+        <div class="prose prose-invert prose-sm lg:prose-base max-w-none">
+            <Content />
+        </div>
+    </article>
+</Layout>
