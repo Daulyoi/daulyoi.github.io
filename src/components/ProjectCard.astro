@@ -2,21 +2,16 @@
 const { title, cover, description, href } = Astro.props;
 ---
 
-<div>
-    <a
-        href={href}
-        class="flex flex-col p-4 rounded-lg mb-6 group cursor-pointer"
+<a href={href} class="flex flex-col p-4 rounded-lg group cursor-pointer">
+    <img
+        src={cover}
+        alt={title}
+        class="w-full h-48 object-cover rounded-lg border-2 group-hover:scale-105 transition duration-300"
+    />
+    <h2
+        class="text-xl font-semibold text-blue-400 mt-4 group-hover:underline underline-offset-2"
     >
-        <img
-            src={cover}
-            alt={title}
-            class="w-full h-48 object-cover rounded-lg border-2 group-hover:scale-105 transition duration-300"
-        />
-        <h2
-            class="text-xl font-semibold text-blue-400 mt-4 group-hover:underline underline-offset-2"
-        >
-            {title}
-        </h2>
-        <p class="text-neutral-300 mt-2 text-sm">{description}</p>
-    </a>
-</div>
+        {title}
+    </h2>
+    <p class="text-neutral-300 mt-2 text-sm">{description}</p>
+</a>
