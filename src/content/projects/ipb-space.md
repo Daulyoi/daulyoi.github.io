@@ -1,8 +1,8 @@
 ---
 title: "IPB Space"
 description: "A facility booking platform built as a System Design course final project. Architected the backend with FastAPI, Docker, JWT auth, and deployed on Railway."
-cover: "/DummyImg.jpg"
-link: "https://github.com/Daulyoi"
+cover: "/ipb-space.webp"
+link: "https://github.com/HusniAbdillah/ipb-space"
 date: 2025-06-01
 tags: ["FastAPI", "Docker", "JWT", "Appwrite", "Railway", "Python"]
 ---

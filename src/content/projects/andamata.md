@@ -1,7 +1,7 @@
 ---
-title: "Andamata"
+title: "CodePanda - Andamata"
 description: "A high-performance web profile for a travel agency, built solo with Astro.js and SCSS. Features SEO optimization, static paths, and CMS-driven rich text."
-cover: "/DummyImg.jpg"
+cover: "/placeholder.svg"
 link: "https://github.com/Daulyoi"
 date: 2025-05-01
 tags: ["Astro.js", "SCSS", "SEO", "CMS", "Freelance"]

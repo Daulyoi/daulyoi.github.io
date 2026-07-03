@@ -1,7 +1,7 @@
 ---
 title: "AkuCuciin"
 description: "A responsive order-placement flow for a high-traffic laundry delivery platform with real-time location mapping."
-cover: "/DummyImg.jpg"
+cover: "/akucuciin.webp"
 link: "https://github.com/Daulyoi"
 date: 2025-04-01
 tags: ["React", "Leaflet.js", "Bento Grid", "Postman"]
